@@ -1,0 +1,7 @@
+https://www.google.com/finance/quote/SPY:NYSEARCA?hl=en&window=5Y
+https://www.google.com/finance/quote/QQQ:NASDAQ?hl=en&window=5Y
+https://www.google.com/finance/quote/XLE:NYSEARCA?hl=en&window=5Y
+https://www.google.com/finance/quote/XLE:NYSEARCA?hl=en&window=5Y
+https://www.google.com/finance/quote/SMH:NASDAQ?hl=en&window=5Y
+https://www.google.com/finance/quote/TLT:NASDAQ?hl=en&window=5Y 
+
