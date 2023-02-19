@@ -4,25 +4,41 @@ from datetime import date, timedelta
 Stocks = [
 "SPY",
 "QQQ",
-"VIX",
+"^VIX",
 "XLE",
 "SMH",
 "TLT"
 ]
 
+#data
 def main():
-    #comp = yf.Ticker(page)
-    data = yf.download(page, start = start_date, end=end_date)
-    print(page, data, file=outfile)
+    print(page)
+    company = yf.Ticker(page)
+    company.fast_info   
 
+    data = yf.download(tickers = page,
+                       period = "2y",
+                       interval = "1d")
+    print(data, file = outfile)
+
+#data scraping
 if __name__ == "__main__":
-    end_date = date.today()
-    start_date = end_date - timedelta(days =1095)
-    outfile = open("data.txt", "w")
     for i in range (len(Stocks)):
+        if Stocks[i] == "SPY":
+            outfile = open(f"SPY.txt", "w")
+        elif Stocks[i] == "QQQ":
+            outfile = open(f"QQQ.txt", "w")
+        elif Stocks[i] == "^VIX":
+            outfile = open(f"VIX.txt", "w")
+        elif Stocks[i] == "XLE":
+            outfile = open(f"XLE.txt", "w")
+        elif Stocks[i] == "SMH":
+            outfile = open(f"SMH.txt", "w")
+        elif Stocks[i] == "TLT":
+            outfile = open(f"TLT.txt", "w")
         page = Stocks[i]
         main()
-    outfile.close()
+        outfile.close()
 
 
 
